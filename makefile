@@ -15,8 +15,6 @@ program: $(OBJECTS)
 	$(CC) $(CFLAGS) $<
 run: program
 	./$(PNAME) $(PROGRAMPARAMS)
-time: program
-	/usr/bin/time -f "%e" ./$(PNAME) $(PROGRAMPARAMS)
 val: $(OBJECTS)
 	gcc -g3 -Wall -Werror -Wextra -o $(PNAME) $(OBJECTS)
 	valgrind $(VALFLAGS) ./$(PNAME) $(PROGRAMPARAMS)
