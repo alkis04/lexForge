@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
         }
 
         ++comb[pos];
-        for(int j = 0; j < i; ++j) printf("%d", comb[j]); printf(" "); 
+        // for(int j = 0; j < i; ++j) printf("%d", comb[j]); printf(" "); 
         for(int j = 0; j < i; ++j){
             printf("%s", words[comb[j]]);
         }
