@@ -23,7 +23,6 @@ int main(int argc, char *argv[]){
     }
     int pos = 0; 
     --i;
-    unsigned long long int count = 0;
     do{
         pos = 0; 
         while(comb[pos] == i){
@@ -32,14 +31,11 @@ int main(int argc, char *argv[]){
         }
 
         ++comb[pos];
-        // for(int j = 0; j < i; ++j) printf("%d", comb[j]); printf(" "); 
+        for(int j = 0; j < i; ++j) printf("%d", comb[j]); printf(" "); 
         for(int j = 0; j < i; ++j){
             printf("%s", words[comb[j]]);
         }
         printf("\n");
-        ++count;
-        printf("%d\n", count);
     }while(pos < i);
-    printf("%d\n", count);
     return 0;
 }
